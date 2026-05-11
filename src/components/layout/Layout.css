@@ -1,0 +1,38 @@
+.layout-desktop {
+  display: flex;
+  min-height: 100vh;
+  background: var(--color-surface-secondary);
+}
+.layout-desktop__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.page-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.layout-desktop__body {
+  padding: 32px 48px;
+  flex: 1;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+.layout-mobile__body {
+  padding: 16px 16px 80px;
+  min-height: calc(100vh - 56px);
+  background: var(--color-surface-secondary);
+}
+
+/* IonContent shadow-host: ensure flex layout fills its viewport */
+ion-content.page-content {
+  --background: var(--color-surface-secondary);
+}
+ion-content.page-content::part(scroll) {
+  display: flex;
+  flex-direction: column;
+}

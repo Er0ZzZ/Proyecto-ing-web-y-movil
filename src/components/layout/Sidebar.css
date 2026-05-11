@@ -1,0 +1,67 @@
+.sidebar {
+  width: 225px;
+  min-width: 225px;
+  background: var(--color-brand-primary-darker);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 16px;
+  min-height: 100vh;
+}
+.sidebar__brand { padding: 0 20px 20px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.sidebar__brand-title { font-size: 15px; font-weight: 700; }
+.sidebar__brand-sub   { font-size: 11px; color: #94a3b8; margin-top: 4px; }
+
+.sidebar__section-label {
+  padding: 14px 20px 8px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: #6b89aa;
+}
+
+.sidebar__nav { display: flex; flex-direction: column; gap: 2px; padding: 0 12px; }
+.sidebar__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  border: none;
+  color: #cbd5e1;
+  text-align: left;
+  padding: 9px 12px;
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: var(--font-primary);
+}
+.sidebar__item ion-icon { font-size: 17px; flex-shrink: 0; }
+.sidebar__item:hover { background: rgba(255,255,255,0.05); color: #fff; }
+.sidebar__item--active { background: var(--color-brand-primary); color: #fff; }
+
+.sidebar__divider { height: 1px; background: rgba(255,255,255,0.08); margin: 14px 20px 0; }
+
+.sidebar__info { padding: 4px 20px 0; font-size: 11px; color: #94a3b8; }
+.sidebar__info-title { font-weight: 600; color: #cbd5e1; margin-bottom: 8px; font-size: 11.5px; }
+.sidebar__info-line { display: flex; gap: 8px; align-items: flex-start; }
+.sidebar__info-line ion-icon { font-size: 14px; margin-top: 2px; color: var(--color-brand-primary); }
+.sidebar__info-phone { color: #fff; font-weight: 600; margin-top: 2px; }
+
+/* Admin variant */
+.sidebar--admin { background: #0a1929; width: 225px; min-width: 225px; }
+.sidebar__admin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 4px 8px;
+  background: rgba(234,62,71,0.18);
+  border: 1px solid rgba(234,62,71,0.5);
+  color: #fca5a5;
+  border-radius: 4px;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+.sidebar__admin-badge ion-icon { font-size: 10px; }

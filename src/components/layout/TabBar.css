@@ -1,0 +1,52 @@
+.tab-bar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  height: 64px;
+  display: flex;
+  z-index: 30;
+  border-top: 1px solid var(--color-border-default);
+}
+.tab-bar--light { background: #fff; }
+.tab-bar--dark  { background: #0a1929; border-top-color: rgba(255,255,255,0.08); }
+.tab-bar__item {
+  flex: 1;
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: 500;
+  font-family: var(--font-primary);
+  cursor: pointer;
+  position: relative;
+}
+.tab-bar--dark .tab-bar__item { color: #94a3b8; }
+.tab-bar__item ion-icon { font-size: 20px; }
+
+/* Variante de 6 ítems (incluye Cerrar sesión) */
+.tab-bar--6 .tab-bar__item { font-size: 10px; }
+.tab-bar--6 .tab-bar__item ion-icon { font-size: 19px; }
+
+.tab-bar__item--logout {
+  color: var(--color-error) !important;
+  border-left: 1px solid var(--color-border-default);
+}
+.tab-bar--dark .tab-bar__item--logout {
+  color: #fda4af !important;
+  border-left-color: rgba(255,255,255,0.08);
+}
+.tab-bar__item--logout.tab-bar__item--active::before { display: none; }
+.tab-bar__item--active { color: var(--color-brand-primary); }
+.tab-bar--dark .tab-bar__item--active { color: #60a5fa; }
+.tab-bar__item--active::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 25%; right: 25%;
+  height: 3px;
+  background: var(--color-brand-primary);
+  border-radius: 0 0 3px 3px;
+}

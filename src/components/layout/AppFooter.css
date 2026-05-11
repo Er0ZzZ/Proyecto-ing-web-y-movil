@@ -1,0 +1,80 @@
+.app-footer {
+  background: var(--color-brand-primary-darker);
+  color: #cbd5e1;
+  padding: 40px 48px 24px;
+  margin-top: auto;
+}
+.app-footer--admin { background: #0a1929; }
+.app-footer__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.app-footer__col { display: flex; flex-direction: column; gap: 6px; }
+.app-footer__title { color: #fff; font-weight: 600; font-size: 14px; margin-bottom: 8px; }
+.app-footer__line  { font-size: 13px; }
+.app-footer__col a { font-size: 13px; color: #cbd5e1; }
+.app-footer__copy {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 12px;
+  text-align: center;
+  color: #94a3b8;
+}
+.app-footer__inner { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+@media (max-width: 1023px) {
+  .app-footer__inner { grid-template-columns: 1fr; }
+}
+
+/* Admin footer */
+.admin-footer {
+  background: #0a1929;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 16px 32px;
+  color: #94a3b8;
+}
+.admin-footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.admin-footer__user { display: flex; align-items: center; gap: 10px; }
+.admin-footer__avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--color-brand-primary-dark);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+.admin-footer__logo {
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+}
+.app-footer__logo {
+  background: rgba(255,255,255,0.04);
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+}
+.admin-footer__name  { color: #e2e8f0; font-size: 13px; font-weight: 600; }
+.admin-footer__email { color: #6b89aa; font-size: 11px; }
+.admin-footer__copy  { font-size: 11px; color: #6b89aa; flex: 1; text-align: center; }
+.admin-footer__version { font-size: 11px; color: #6b89aa; text-align: right; line-height: 1.4; }
+
+@media (max-width: 1023px) {
+  .admin-footer__inner { flex-direction: column; align-items: flex-start; }
+  .admin-footer__copy  { text-align: left; }
+}
